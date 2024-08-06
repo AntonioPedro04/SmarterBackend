@@ -20,10 +20,7 @@ public class UserController {
         return userService.findAllUsers();
     }
 
-    @PostMapping("/login")
-    public User validateLogin(@RequestBody User user){
-        return userService.validateLogin(user);
-    }
+
 
 
 }

@@ -19,11 +19,5 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User validateLogin(User user){
-        User loggedUser = userRepository.findByUsernameAndUserPassword(user.getUsername(), user.getUserPassword())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "User not found"));
-        return loggedUser;
-    }
 
 }
