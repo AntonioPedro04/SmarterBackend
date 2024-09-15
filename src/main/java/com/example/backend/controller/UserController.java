@@ -1,6 +1,6 @@
 package com.example.backend.controller;
 
-import com.example.backend.model.User;
+import com.example.backend.model.entity.User;
 import com.example.backend.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,6 @@ public class UserController {
         return userService.findAllUsers();
     }
 
-
     @GetMapping("/logged")
     public User getLoggedUser(HttpServletRequest request){
         String username = (String) request.getAttribute("username");
@@ -33,13 +32,5 @@ public class UserController {
     public User findUserByUsername(@PathVariable String username){
         return userService.findUserByUsername(username);
     }
-
-
-
-
-
-
-
-
 
 }

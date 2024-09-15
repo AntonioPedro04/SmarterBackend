@@ -1,8 +1,10 @@
-package com.example.backend.model;
+package com.example.backend.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -21,5 +23,9 @@ public class ExerciseList {
 
     @OneToMany(mappedBy = "exerciseList")
     private List<Exercise> exercises;
+
+    private Date avaiableStartTime;
+
+    private Date avaiableEndTime;
 
 }

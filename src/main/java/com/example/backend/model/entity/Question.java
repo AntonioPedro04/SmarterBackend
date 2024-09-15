@@ -1,5 +1,6 @@
-package com.example.backend.model;
+package com.example.backend.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,12 +15,12 @@ public class Question {
     private Integer id;
 
     private String text;
-    private String firstAlternative;
-    private String secondAlternative;
-    private String thirdAlternative;
-    private String fourthAlternative;
-    private String fifthAlternative;
-    private String answer;
+
+    @OneToMany(mappedBy = "question")
+    private List<Alternative> alternatives;
+
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answers;
 
     @OneToMany(mappedBy = "question")
     private List<Exercise> exercises;

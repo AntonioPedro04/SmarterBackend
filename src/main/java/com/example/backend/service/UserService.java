@@ -1,11 +1,9 @@
 package com.example.backend.service;
 
-import com.example.backend.model.User;
+import com.example.backend.model.entity.User;
 import com.example.backend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
