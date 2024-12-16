@@ -1,7 +1,10 @@
 package com.example.backend.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.Date;
 
 @Entity
 @Data
@@ -12,16 +15,19 @@ public class UserAnswer {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name ="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name ="userResponseStatus_id")
+    @JoinColumn(name = "userResponseStatus_id")
     private UserResponseStatus userResponseStatus;
 
     @ManyToOne
-    @JoinColumn(name ="exercise_id")
+    @JoinColumn(name = "exercise_id")
     private Exercise exercise;
 
-    private String attempt;
+    private Integer errors;
+
+    private Date timeDone;
+
 }

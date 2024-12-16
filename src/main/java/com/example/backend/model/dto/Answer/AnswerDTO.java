@@ -1,4 +1,4 @@
-package com.example.backend.model.dto.Alternative;
+package com.example.backend.model.dto.Answer;
 
 
 import lombok.Getter;

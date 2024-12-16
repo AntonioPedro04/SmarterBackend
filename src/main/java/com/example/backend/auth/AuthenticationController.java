@@ -1,8 +1,11 @@
 package com.example.backend.auth;
 
+import com.example.backend.exception.UserAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import javax.swing.text.html.parser.Entity;
 
@@ -18,7 +21,7 @@ public class AuthenticationController {
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ){
-        return ResponseEntity.ok(authenticationService.register(request));
+             return ResponseEntity.ok(authenticationService.register(request));
     }
 
     @PostMapping("/authenticate")

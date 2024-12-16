@@ -8,5 +8,7 @@ import lombok.Setter;
 @Setter
 public class AlternativeDTO {
 
+    private Integer id;
+
     private String text;
 }

@@ -21,4 +21,5 @@ public class RegisterRequest {
 
     private String country;
 
+    private String code;
 }

@@ -1,24 +1,20 @@
 package com.example.backend.model.dto.ExerciseList;
 
-import com.example.backend.model.dto.Exercise.ExerciseDTO;
-import com.example.backend.model.entity.Exercise;
+import com.example.backend.model.entity.ExerciseList;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
+
 
 @Getter
 @Setter
-public class ExerciseListDTO {
+public class ExerciseListGetUserAnswersDTO {
 
     private Integer id;
-
     private String name;
-
-    private List<ExerciseDTO> exercises;
-
     private Date avaiableStartTime;
-
     private Date avaiableEndTime;
 }

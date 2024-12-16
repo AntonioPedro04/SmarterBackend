@@ -28,11 +28,16 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private String country;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
     @OneToMany(mappedBy = "user")
     private List<UserAnswer> answers;
+
+    @ManyToOne
+    @JoinColumn(name="code_id")
+    private Code code;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

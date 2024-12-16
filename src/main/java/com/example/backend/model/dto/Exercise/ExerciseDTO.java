@@ -16,6 +16,8 @@ import java.util.List;
 @Setter
 public class ExerciseDTO {
 
+    private Integer id;
+
     private Integer points;
 
     private QuestionDTO question;

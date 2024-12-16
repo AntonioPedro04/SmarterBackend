@@ -1,7 +1,7 @@
 package com.example.backend.model.dto.Question;
 
 import com.example.backend.model.dto.Alternative.AlternativeDTO;
-import com.example.backend.model.dto.Alternative.AnswerDTO;
+import com.example.backend.model.dto.Answer.AnswerDTO;
 import com.example.backend.model.entity.Alternative;
 import com.example.backend.model.entity.Answer;
 import com.example.backend.model.entity.Exercise;
@@ -15,6 +15,8 @@ import java.util.List;
 @Setter
 @Getter
 public class QuestionDTO {
+
+    private Integer id;
 
     private String text;
 
