@@ -26,7 +26,7 @@ public interface UserAnswerRepository extends JpaRepository<UserAnswer, Integer>
             "JOIN \"user\" u ON u.id = ue.user_id " +
             "GROUP BY u.username, u.firstname, u.lastname, u.country " +
             "ORDER BY points DESC " +
-            "limit 3",
+            "limit 10",
             nativeQuery = true)
     List<IUserTotalPoints> getWeekRankTop3();
     @Query(value = "WITH unique_exercises AS (" +
