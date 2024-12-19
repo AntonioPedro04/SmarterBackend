@@ -30,4 +30,9 @@ public class AuthenticationController {
     ){
         return ResponseEntity.ok(authenticationService.authenticate(request));
     }
+
+    @GetMapping("/tokenValid")
+    public boolean tokenValid(){
+        return true;
+    }
 }
